@@ -118,7 +118,6 @@ body.light-mode .modal-tab.active {
 body.light-mode .title {
   color: var(--text-muted);
 }
-
 /* ==================== NAVBAR ==================== */
 .navbar {
   position: fixed;
@@ -974,3 +973,4 @@ footer {
     font-size: 1.5rem;
   }
 }
+
