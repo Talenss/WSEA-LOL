@@ -54,30 +54,69 @@ body.light-mode .esports-card {
   color: var(--text-dark);
 }
 
-body.light-mode input,
-body.light-mode select,
-body.light-mode textarea {
-  background: var(--card-light);
+body.light-mode .card h3,
+body.light-mode .card h4,
+body.light-mode .modal-content h2,
+body.light-mode .modal-content h4,
+body.light-mode .news-card h3,
+body.light-mode .esports-card h2 {
   color: var(--text-dark);
+}
+
+body.light-mode .card p,
+body.light-mode .news-card p,
+body.light-mode .esports-card p,
+body.light-mode .modal-body p {
+  color: var(--text-muted);
+}
+
+body.light-mode .champion-card {
+  background: var(--card-light);
   border-color: #e2e8f0;
 }
 
-body.light-mode .btn-primary {
-  background: var(--accent);
-  color: white;
+body.light-mode .champion-info {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-dark);
 }
 
+body.light-mode .champion-name {
+  color: var(--text-dark);
+}
+
+body.light-mode .champion-role,
 body.light-mode .text-secondary {
   color: var(--text-muted);
 }
 
-body.light-mode .nav-btn {
+body.light-mode .ability {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: #e2e8f0;
+  color: var(--text-dark);
+}
+
+body.light-mode .ability h4 {
+  color: var(--accent);
+}
+
+body.light-mode .ability p {
   color: var(--text-muted);
 }
 
-body.light-mode .nav-btn:hover,
-body.light-mode .nav-btn.active {
+body.light-mode .modal-tabs {
+  border-color: #e2e8f0;
+}
+
+body.light-mode .modal-tab {
+  color: var(--text-muted);
+}
+
+body.light-mode .modal-tab.active {
   color: var(--accent);
+}
+
+body.light-mode .title {
+  color: var(--text-muted);
 }
 
 /* ==================== NAVBAR ==================== */
