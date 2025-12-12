@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Patch 15.2 Balance Changes - League of Legends">
+  <meta name="theme-color" content="#0a0e27">
+  <title>Patch 15.2 Balance Changes - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .article-body {
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body h3 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .balance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .balance-table th,
+    .balance-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    .balance-table th {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .balance-table tr:hover {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .buff {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .nerf {
+      color: #ef4444;
+      font-weight: 600;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    body.light-mode .balance-table {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    body.light-mode .balance-table th {
+      background: rgba(59, 130, 246, 0.15);
+    }
+
+    body.light-mode .highlight-box {
+      background: rgba(59, 130, 246, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <a href="esports.html"><button class="nav-btn">Esports</button></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 5rem; min-height: 100vh;">
+    <div class="article-container">
+      <a href="news.html" class="back-btn">← Back to News</a>
+
+      <div class="article-header">
+        <h1>Patch 15.2 Balance Changes Released</h1>
+        <div class="article-meta">
+          <span>📅 December 10, 2025</span>
+          <span>🏷️ Patch Notes</span>
+          <span>⏱️ 8 min read</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>
+          The highly anticipated Patch 15.2 is now live across all regions, bringing significant balance changes to 15 champions and introducing new items that will reshape the meta. Our balance team has been carefully monitoring the competitive scene and solo queue to ensure these changes create a healthier game environment.
+        </p>
+
+        <div class="highlight-box">
+          <strong>TL;DR:</strong> Mid-lane mages get scaling buffs, ADCs receive early game power, jungle items reworked, and 3 items get price adjustments.
+        </div>
+
+        <h3>🧙 Mid-Lane Mage Changes</h3>
+        <p>
+          The mid-lane has been dominated by assassins and control mages for too long. We're giving burst mages the tools they need to compete in the early and mid game while maintaining their late-game scaling fantasy.
+        </p>
+
+        <table class="balance-table">
+          <thead>
+            <tr>
+              <th>Champion</th>
+              <th>Change</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ahri</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>Q damage increased from 40/65/90/115/140 → 45/75/105/135/165</td>
+            </tr>
+            <tr>
+              <td><strong>Syndra</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>E damage increased. Base mana reduced by 50</td>
+            </tr>
+            <tr>
+              <td><strong>Lux</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>Passive bonus AP ratio increased from 15% → 20%</td>
+            </tr>
+            <tr>
+              <td><strong>Lissandra</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>W cooldown reduced from 12s → 10s</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>🏹 ADC Early Game Buffs</h3>
+        <p>
+          Bottom lane has struggled in the early game. We're giving ADCs better tools to farm safely and trade with enemies. These changes should help ADCs feel more relevant in the first 15 minutes.
+        </p>
+
+        <table class="balance-table">
+          <thead>
+            <tr>
+              <th>Champion</th>
+              <th>Change</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Jinx</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>Attack speed growth increased from 3% → 3.5%</td>
+            </tr>
+            <tr>
+              <td><strong>Caitlyn</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>Q headshot damage bonus increased from 40% → 50%</td>
+            </tr>
+            <tr>
+              <td><strong>Kog'Maw</strong></td>
+              <td><span class="buff">BUFF</span></td>
+              <td>Base attack damage increased from 49 → 52</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>💔 Tank Adjustments</h3>
+        <p>
+          Some tanks have been overperforming in solo queue. We're making targeted nerfs to keep them balanced while preserving their identity.
+        </p>
+
+        <table class="balance-table">
+          <thead>
+            <tr>
+              <th>Champion</th>
+              <th>Change</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ornn</strong></td>
+              <td><span class="nerf">NERF</span></td>
+              <td>Base armor reduced from 38 → 35</td>
+            </tr>
+            <tr>
+              <td><strong>Sion</strong></td>
+              <td><span class="nerf">NERF</span></td>
+              <td>Q base damage reduced from 40/60/80/100/120 → 35/55/75/95/115</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>🔧 Item Changes</h3>
+        <p>
+          Item prices and effectiveness have been adjusted to create more build diversity. These changes target items that were dominating the meta.
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Hollow Radiance:</strong> Price increased from 2500 → 2600 (was too efficient)</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Crown of the Eternal Winter:</strong> MR increased from 30 → 35</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Liandry's Torment:</strong> Mythic passive changed from 15% bonus health → 10% CDR</li>
+        </ul>
+
+        <h3>🌳 Jungle Changes</h3>
+        <p>
+          The jungle item system is being reworked to provide better scaling for junglers while reducing early game oppression. New upgraded items will provide more meaningful power spikes.
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Note:</strong> These changes were made in collaboration with professional teams and community feedback. We'll be monitoring win rates closely and making adjustments in Patch 15.3 if needed.</p>
+        </div>
+
+        <h3>🔮 Looking Forward</h3>
+        <p>
+          We're excited about the direction these changes are taking the game. Our goal is to create a meta where multiple strategies are viable. As always, we encourage you to test these changes on the PBE and provide feedback in the forums.
+        </p>
+
+        <p>
+          See you on the Rift! Good luck, and remember - it's not about the penta, it's about the friends you make along the way. 🎮
+        </p>
+      </div>
+
+      <a href="news.html" class="back-btn" style="margin-top: 2rem;">← Back to News</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

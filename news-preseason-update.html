@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preseason Items & Systems Update">
+  <meta name="theme-color" content="#0a0e27">
+  <title>Preseason Update - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .article-body {
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body h3 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .changes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .changes-table th,
+    .changes-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    .changes-table th {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .changes-table tr:hover {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .system-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .system-card:hover {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .system-card h4 {
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .system-card p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    body.light-mode .changes-table {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    body.light-mode .changes-table th {
+      background: rgba(59, 130, 246, 0.15);
+    }
+
+    body.light-mode .system-card {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    body.light-mode .system-card:hover {
+      background: rgba(59, 130, 246, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <a href="esports.html"><button class="nav-btn">Esports</button></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 5rem; min-height: 100vh;">
+    <div class="article-container">
+      <a href="news.html" class="back-btn">← Back to News</a>
+
+      <div class="article-header">
+        <h1>⚙️ Preseason Items & Systems Update</h1>
+        <div class="article-meta">
+          <span>📅 November 28, 2025</span>
+          <span>🏷️ Patch Notes</span>
+          <span>⏱️ 7 min read</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>
+          Preseason brings the most significant changes to League of Legends each year. For 2026, we're introducing major item reworks, updated rune trees, and jungle overhauls that will completely reshape the way you build and play. Here's everything you need to know.
+        </p>
+
+        <div class="highlight-box">
+          <strong>🎮 Preseason Duration:</strong> December 2025 - January 2026 | <strong>Live Servers:</strong> December 10, 2025 onwards
+        </div>
+
+        <h3>🛒 New Mythic Items</h3>
+        <p>
+          Five entirely new mythic items have been introduced to provide fresh build paths and playstyles. These items are tier 1 and will define your overall build strategy.
+        </p>
+
+        <table class="changes-table">
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Cost</th>
+              <th>Main Stat</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ethersworn Warden</strong></td>
+              <td>3200 Gold</td>
+              <td>80 AP + 40 AD</td>
+              <td>Gain ability haste. Enemies hit by spells take 10% more damage for 4s</td>
+            </tr>
+            <tr>
+              <td><strong>Goliath's Grip</strong></td>
+              <td>3200 Gold</td>
+              <td>400 HP + 40 AD</td>
+              <td>Gain bonus health per level. Attacks slow enemies</td>
+            </tr>
+            <tr>
+              <td><strong>Arcane Catalyst</strong></td>
+              <td>3200 Gold</td>
+              <td>100 AP</td>
+              <td>Gain mana scaling. Spells restore mana on hit</td>
+            </tr>
+            <tr>
+              <td><strong>Void Reaper</strong></td>
+              <td>3200 Gold</td>
+              <td>70 AD + 25% Crit</td>
+              <td>Attacks deal true damage. Gain omnivamp</td>
+            </tr>
+            <tr>
+              <td><strong>Sentinel's Fortress</strong></td>
+              <td>3200 Gold</td>
+              <td>40 AR + 60 MR</td>
+              <td>Grants ally protection aura. Reduce incoming damage for nearby allies</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>🌳 Jungle Item Rework</h3>
+        <p>
+          The jungle has been completely overhauled to provide better scaling for junglers while reducing early game oppression. New upgraded items offer meaningful power spikes at key moments.
+        </p>
+
+        <div class="system-grid">
+          <div class="system-card">
+            <h4>🔥 Jungle Enhancement</h4>
+            <p>Grants additional gold from monster camps. Scales with game time for consistent powering up.</p>
+          </div>
+          <div class="system-card">
+            <h4>⚡ Upgraded Tier 2</h4>
+            <p>New tier 2 jungle items provide better stats and unique effects for different playstyles.</p>
+          </div>
+          <div class="system-card">
+            <h4>🎯 Ganking Efficiency</h4>
+            <p>Reduced experience penalty for failing ganks. Junglers get second chances more often.</p>
+          </div>
+          <div class="system-card">
+            <h4>🏆 Gold Scaling</h4>
+            <p>Increased gold per camp clear. Junglers can keep pace with laners in economic growth.</p>
+          </div>
+        </div>
+
+        <h3>📖 Rune Tree Updates</h3>
+        <p>
+          All five rune trees (Precision, Domination, Sorcery, Resolve, Inspiration) have received updates. New keystones offer fresh playstyles while classic runes get stat adjustments.
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Precision:</strong> New keystone for attackers. Grants scaling attack damage based on critical strikes</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Domination:</strong> Reworked damage keystones. More options for aggressive junglers and assassins</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Sorcery:</strong> New haste-focused keystone. Better for ability haste scaling</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Resolve:</strong> Reworked defensive runes. Better scaling for tanky supports and top laners</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Inspiration:</strong> New utility keystone. Provides flexible bonuses for support roles</li>
+        </ul>
+
+        <h3>🎯 Late Game Changes</h3>
+        <p>
+          We're making adjustments to ensure late game is more decisive and less drawn out. Games that reach 35+ minutes will have clearer win conditions.
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Baron Buff Changes:</strong> Enhanced stats for 2 minutes after Baron kill. Makes closing games more manageable.</p>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Tower Defenses:</strong> Late game towers gain damage bonus when multiple enemies approach. Encourages better positioning.</p>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Inhibitor Changes:</strong> Respawn timers adjusted. Destroyed inhibitors respawn after 5 minutes (up from 4).</p>
+        </div>
+
+        <h3>⚔️ Combat Mechanics</h3>
+        <p>
+          Several fundamental combat mechanics have been adjusted for better gameplay:
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Crowd Control:</strong> Stun duration capped at 2.5 seconds (was 3 seconds)</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Damage Spikes:</strong> Burst damage reduced slightly across the board. Encourages teamwork</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Healing:</strong> Grievous Wounds now reduces healing by 40% (was 35%)</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Shields:</strong> Maximum shield values adjusted for better balance</li>
+        </ul>
+
+        <h3>🎮 What to Expect in Preseason</h3>
+        <p>
+          Preseason is the perfect time to experiment with new builds and strategies. Here's what the community should expect:
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Chaos Phase (Week 1-2):</strong> Everyone experimenting with new items and runes. Expect unusual builds and playstyles.</p>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Meta Settling (Week 3-4):</strong> Competitive players find optimal builds. Meta begins to solidify.</p>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Balance Patches:</strong> Rapid hotfixes as balance issues are discovered. Be prepared for adjustments.</p>
+        </div>
+
+        <h3>📊 Performance Tuning</h3>
+        <p>
+          We've optimized game performance for preseason. New items and effects should run smoothly even in late-game fights. FPS improvements especially for team fights with many visual effects.
+        </p>
+
+        <h3>🧪 PBE vs Live</h3>
+        <p>
+          All these changes were tested extensively on the Public Beta Environment (PBE). Your feedback during PBE testing was crucial in shaping these final changes. We heard your concerns and made adjustments based on your input.
+        </p>
+
+        <h3>💡 Tips for Success</h3>
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;">Watch pro players' preseason streams to see new builds in action</li>
+          <li style="margin-bottom: 0.75rem;">Don't lock in your main role immediately - try new builds</li>
+          <li style="margin-bottom: 0.75rem;">Use preseason to learn new mechanics and playstyles</li>
+          <li style="margin-bottom: 0.75rem;">Follow patch updates for balance adjustments</li>
+        </ul>
+
+        <p style="margin-top: 2rem; font-style: italic; color: var(--accent);">
+          Welcome to Preseason 2026! Get ready to discover a whole new League of Legends. The meta is about to shift dramatically! ⚔️
+        </p>
+      </div>
+
+      <a href="news.html" class="back-btn" style="margin-top: 2rem;">← Back to News</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

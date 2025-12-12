@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LEC - European League Championship - League of Legends Esports">
+  <meta name="theme-color" content="#0a0e27">
+  <title>LEC Spring 2026 - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .esports-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+
+    .league-header {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .league-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .league-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .info-item {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .info-item h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .info-item p {
+      margin-bottom: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .teams-section h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .standings-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .standings-table th,
+    .standings-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+    }
+
+    .standings-table th {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .standings-table tr:hover {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .team-card {
+      background: var(--card-dark);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+    }
+
+    .team-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
+    }
+
+    .team-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .team-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-stat span:first-child {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .schedule-section h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .match-card {
+      background: var(--card-dark);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .match-teams {
+      flex: 1;
+    }
+
+    .match-team {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .match-time {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.2);
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    body.light-mode .standings-table {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    body.light-mode .standings-table th {
+      background: rgba(59, 130, 246, 0.15);
+    }
+
+    body.light-mode .team-card,
+    body.light-mode .match-card {
+      background: var(--card-light);
+      border-color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <a href="esports.html"><button class="nav-btn">Esports</button></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 5rem; min-height: 100vh;">
+    <div class="esports-container">
+      <a href="esports.html" class="back-btn">← Back to Esports</a>
+
+      <div class="league-header">
+        <h1>🏆 LEC Spring 2026</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">European League Championship</p>
+        
+        <div class="league-info">
+          <div class="info-item">
+            <h4>Status</h4>
+            <p style="color: #10b981;">Starts January 17, 2026</p>
+          </div>
+          <div class="info-item">
+            <h4>Teams</h4>
+            <p>10</p>
+          </div>
+          <div class="info-item">
+            <h4>Region</h4>
+            <p>Europe</p>
+          </div>
+          <div class="info-item">
+            <h4>Format</h4>
+            <p>Double Round Robin</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="teams-section">
+        <h2>📋 Current Standings (Preseason)</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Spring Split begins January 17, 2026. Standings will be updated as matches are played.</p>
+
+        <table class="standings-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Win Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>G2 Esports</strong></td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>Fnatic</strong></td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>MAD Lions</strong></td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>Rogue</strong></td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><strong>Team Vitality</strong></td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="teams-section">
+        <h2>🎮 Participating Teams</h2>
+
+        <div class="team-card">
+          <div class="team-name">G2 Esports</div>
+          <p style="color: var(--text-secondary);">Multiple-time LEC champions with star players across all roles. Favorites to win Spring 2026.</p>
+          <div class="team-stats">
+            <div class="team-stat">
+              <span>Titles</span>
+              <span style="color: var(--text-secondary);">4 LEC Championships</span>
+            </div>
+            <div class="team-stat">
+              <span>Players</span>
+              <span style="color: var(--text-secondary);">5 World Championship Winners</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-name">Fnatic</div>
+          <p style="color: var(--text-secondary);">Legendary organization with consistent performances. Known for strong early game execution.</p>
+          <div class="team-stats">
+            <div class="team-stat">
+              <span>Titles</span>
+              <span style="color: var(--text-secondary);">3 LEC Championships</span>
+            </div>
+            <div class="team-stat">
+              <span>Players</span>
+              <span style="color: var(--text-secondary);">European talent hub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-name">MAD Lions</div>
+          <p style="color: var(--text-secondary);">Rising powerhouse with aggressive playstyle. Strong contender for Spring 2026.</p>
+          <div class="team-stats">
+            <div class="team-stat">
+              <span>Titles</span>
+              <span style="color: var(--text-secondary);">1 LEC Championship</span>
+            </div>
+            <div class="team-stat">
+              <span>Players</span>
+              <span style="color: var(--text-secondary);">MSI Winners 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-section">
+        <h2>📅 Spring 2026 Schedule</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Matches will be played weekly starting January 17, 2026.</p>
+
+        <div class="match-card">
+          <div class="match-teams">
+            <div class="match-team">G2 Esports vs Fnatic</div>
+            <span class="badge">Opening Match</span>
+          </div>
+          <div class="match-time">
+            <p>January 17, 2026</p>
+            <p>6:00 PM CET</p>
+          </div>
+        </div>
+
+        <div class="match-card">
+          <div class="match-teams">
+            <div class="match-team">MAD Lions vs Rogue</div>
+          </div>
+          <div class="match-time">
+            <p>January 18, 2026</p>
+            <p>5:00 PM CET</p>
+          </div>
+        </div>
+
+        <div class="match-card">
+          <div class="match-teams">
+            <div class="match-team">Team Vitality vs Excel Esports</div>
+          </div>
+          <div class="match-time">
+            <p>January 18, 2026</p>
+            <p>7:00 PM CET</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2)); border: 1px solid var(--accent); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
+        <h3 style="margin-bottom: 1rem;">🔴 Spring 2026 Finals</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">The top 2 teams from the regular season will face off in the Grand Finals on April 26, 2026 at the LEC Studios in Berlin.</p>
+        <p style="color: var(--text-secondary); font-style: italic;">Winner qualifies for the 2026 Mid-Season Invitational (MSI) and gains seeding for Worlds 2026.</p>
+      </div>
+
+      <a href="esports.html" class="back-btn" style="margin-top: 2rem;">← Back to Esports</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

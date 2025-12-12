@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="League of Legends esports - Follow LEC, LCK, LPL, LCS, and World Championship tournaments.">
+  <meta name="theme-color" content="#0a0e27">
+  <title>Esports - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <button class="nav-btn active">Esports</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="page active" style="padding-top: 5rem; min-height: 100vh;">
+    <div class="container">
+      <!-- Page Header -->
+      <h1>ESPORTS</h1>
+      <p class="text-secondary">Follow global tournaments, standings, and match schedules. Watch the world's best teams compete on the Rift.</p>
+
+      <!-- Esports Grid -->
+      <div class="esports-grid">
+        <!-- LEC -->
+        <div class="esports-card">
+          <h2>LEC</h2>
+          <p class="subtitle">European Championship</p>
+          <div class="info">
+            <p><strong>Teams:</strong> 10</p>
+            <p><strong>Region:</strong> Europe</p>
+            <p><strong>Founded:</strong> 2019</p>
+            <p class="status">🔴 Spring Split - Starts January 2026</p>
+          </div>
+          <a href="esports-lec.html" style="text-decoration: none;">
+            <button class="btn-primary" style="width: 100%; margin-top: 1rem;">View Standings</button>
+          </a>
+        </div>
+
+        <!-- LCK -->
+        <div class="esports-card">
+          <h2>LCK</h2>
+          <p class="subtitle">Korean Championship</p>
+          <div class="info">
+            <p><strong>Teams:</strong> 10</p>
+            <p><strong>Region:</strong> South Korea</p>
+            <p><strong>Founded:</strong> 2012</p>
+            <p class="status">🔴 Spring Split - Starts January 2026</p>
+          </div>
+          <button class="btn-primary" style="width: 100%; margin-top: 1rem;">View Standings</button>
+        </div>
+
+        <!-- LPL -->
+        <div class="esports-card">
+          <h2>LPL</h2>
+          <p class="subtitle">China Pro League</p>
+          <div class="info">
+            <p><strong>Teams:</strong> 17</p>
+            <p><strong>Region:</strong> China</p>
+            <p><strong>Founded:</strong> 2011</p>
+            <p class="status">🔴 Spring Split - Starts January 2026</p>
+          </div>
+          <a href="esports-lpl.html" style="text-decoration: none;">
+            <button class="btn-primary" style="width: 100%; margin-top: 1rem;">View Standings</button>
+          </a>
+        </div>
+
+        <!-- LCS -->
+        <div class="esports-card">
+          <h2>LCS</h2>
+          <p class="subtitle">North American League</p>
+          <div class="info">
+            <p><strong>Teams:</strong> 10</p>
+            <p><strong>Region:</strong> North America</p>
+            <p><strong>Founded:</strong> 2013</p>
+            <p class="status">🔴 Spring Split - Starts January 2026</p>
+          </div>
+          <button class="btn-primary" style="width: 100%; margin-top: 1rem;">View Standings</button>
+        </div>
+
+        <!-- World Championship -->
+        <div class="esports-card world-championship">
+          <div>
+            <h3>🏆 2026 World Championship</h3>
+            <p>The ultimate global tournament featuring the strongest teams from all regions. The world's best compete on the international stage for glory, fame, and the championship trophy. Brackets and schedules will be revealed as we approach the tournament.</p>
+            <button class="btn-primary" style="margin-top: 1rem;">Learn More</button>
+          </div>
+        </div>
+
+        <!-- Mid-Season Invitational -->
+        <div class="esports-card">
+          <h2>MSI</h2>
+          <p class="subtitle">Mid-Season Invitational</p>
+          <div class="info">
+            <p><strong>Format:</strong> International</p>
+            <p><strong>Teams:</strong> 6</p>
+            <p><strong>Frequency:</strong> Annually</p>
+            <p class="status">🔵 Spring 2026 - May</p>
+          </div>
+          <button class="btn-primary" style="width: 100%; margin-top: 1rem;">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

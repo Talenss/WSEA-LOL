@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Winter Festivities Event - League of Legends">
+  <meta name="theme-color" content="#0a0e27">
+  <title>Winter Festivities Event - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .article-body {
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body h3 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .event-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .event-card:hover {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .event-card h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .event-card p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    .reward-list {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-left: 4px solid #10b981;
+    }
+
+    .reward-list li {
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+
+    .countdown {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .countdown h4 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .countdown p {
+      font-size: 0.95rem;
+    }
+
+    body.light-mode .event-card {
+      background: rgba(0, 0, 0, 0.03);
+      border-color: #e2e8f0;
+    }
+
+    body.light-mode .event-card:hover {
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    body.light-mode .reward-list {
+      background: rgba(0, 0, 0, 0.02);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <a href="esports.html"><button class="nav-btn">Esports</button></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 5rem; min-height: 100vh;">
+    <div class="article-container">
+      <a href="news.html" class="back-btn">← Back to News</a>
+
+      <div class="article-header">
+        <h1>❄️ Winter Festivities Event Starts</h1>
+        <div class="article-meta">
+          <span>📅 December 8, 2025</span>
+          <span>🏷️ Events</span>
+          <span>⏱️ 5 min read</span>
+        </div>
+      </div>
+
+      <div class="countdown">
+        <h4>Event Duration</h4>
+        <p>December 8, 2025 - December 31, 2025 (24 Days Remaining)</p>
+      </div>
+
+      <div class="article-body">
+        <p>
+          The Winter Festivities have arrived on the Rift! Celebrate the season with exclusive cosmetics, double progression rewards, and limited-time quests that will keep you engaged throughout December. Whether you're grinding ranked or playing for fun, there's something for everyone.
+        </p>
+
+        <h3>🎁 Double Progression Rewards</h3>
+        <p>
+          For the entire duration of the Winter Festivities event, all players will earn double progression rewards:
+        </p>
+
+        <div class="reward-list">
+          <ul>
+            <li>✨ 2x Blue Essence from champion disenchants</li>
+            <li>✨ 2x Orange Essence from skin shards</li>
+            <li>✨ 2x Mastery points on all champions</li>
+            <li>✨ 2x Battle Pass progress</li>
+            <li>✨ Double drop rates for cosmetic shards</li>
+          </ul>
+        </div>
+
+        <h3>❓ Daily Winter Quests</h3>
+        <p>
+          Complete daily quests to earn Winter Tokens, which can be exchanged for exclusive cosmetics and rewards:
+        </p>
+
+        <div class="event-grid">
+          <div class="event-card">
+            <h4>🎯 Easy Quest</h4>
+            <p>Play 2 games. Reward: 100 Winter Tokens</p>
+          </div>
+          <div class="event-card">
+            <h4>⚡ Medium Quest</h4>
+            <p>Get 1 pentakill or 5 kills. Reward: 250 Winter Tokens</p>
+          </div>
+          <div class="event-card">
+            <h4>🔥 Hard Quest</h4>
+            <p>Win 2 games in a row. Reward: 500 Winter Tokens</p>
+          </div>
+        </div>
+
+        <h3>👗 Exclusive Winter Cosmetics</h3>
+        <p>
+          This event features 5 brand new Winter-themed skins available exclusively during the festivities. Don't miss out on these limited-edition cosmetics!
+        </p>
+
+        <div class="event-grid">
+          <div class="event-card">
+            <h4>❄️ Winter Wonderland Lux</h4>
+            <p>1350 RP or 2200 Winter Tokens</p>
+          </div>
+          <div class="event-card">
+            <h4>🎄 Snowbound Ahri</h4>
+            <p>1350 RP or 2200 Winter Tokens</p>
+          </div>
+          <div class="event-card">
+            <h4>⛄ Frostfire Garen</h4>
+            <p>1350 RP or 2200 Winter Tokens</p>
+          </div>
+          <div class="event-card">
+            <h4>🧊 Crystalline Soraka</h4>
+            <p>975 RP or 1600 Winter Tokens</p>
+          </div>
+          <div class="event-card">
+            <h4>🌨️ Blizzard Yasuo</h4>
+            <p>1350 RP or 2200 Winter Tokens</p>
+          </div>
+        </div>
+
+        <h3>🎉 Emote & Ward Collections</h3>
+        <p>
+          In addition to skins, we're releasing a full collection of winter-themed emotes and wards:
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Winter Cheer Emote Pack:</strong> 5 exclusive emotes (200-350 RP each)</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Festive Ward Skin:</strong> Snowflake Guardian Ward (600 RP)</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Holiday Chromas:</strong> Available for all winter skins at 290 RP each</li>
+        </ul>
+
+        <h3>🏪 Winter Token Shop</h3>
+        <p>
+          Earn Winter Tokens through quests and convert them into exclusive rewards in the Winter Token Shop. Here are some of the best deals:
+        </p>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px; overflow: hidden;">
+          <thead>
+            <tr style="background: rgba(59, 130, 246, 0.1);">
+              <th style="padding: 1rem; text-align: left; color: var(--accent); font-weight: 600;">Item</th>
+              <th style="padding: 1rem; text-align: left; color: var(--accent); font-weight: 600;">Winter Tokens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(59, 130, 246, 0.1);">
+              <td style="padding: 1rem;">1350 RP Skin</td>
+              <td style="padding: 1rem;">2200</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(59, 130, 246, 0.1);">
+              <td style="padding: 1rem;">975 RP Skin</td>
+              <td style="padding: 1rem;">1600</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(59, 130, 246, 0.1);">
+              <td style="padding: 1rem;">Blue Essence (50)</td>
+              <td style="padding: 1rem;">200</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem;">Chromas</td>
+              <td style="padding: 1rem;">290</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>❄️ Limited Time: Double Your Tokens</h3>
+        <p>
+          From December 24-26, all Winter Tokens earned will be doubled! This is the perfect time to grind out those daily quests and stock up on tokens for exclusive rewards.
+        </p>
+
+        <h3>📱 Event Guide</h3>
+        <p>
+          Complete the Winter Festivities event tutorial in-game to unlock a free Winter Skin Shard and 500 starting Winter Tokens. New to the event? The tutorial covers everything you need to know!
+        </p>
+
+        <h3>🎯 Pro Tips</h3>
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;">Complete your daily quests every day for guaranteed tokens</li>
+          <li style="margin-bottom: 0.75rem;">Save your tokens and wait for the double token days (Dec 24-26) to maximize your rewards</li>
+          <li style="margin-bottom: 0.75rem;">Winter skins are limited edition and won't be available after the event</li>
+          <li style="margin-bottom: 0.75rem;">Use your Blue Essence to upgrade skin shards to permanent skins</li>
+        </ul>
+
+        <p style="margin-top: 2rem; font-style: italic; color: var(--accent);">
+          Don't miss out! The Winter Festivities event ends December 31st. Get your favorite skins and emotes before they're gone forever! ❄️
+        </p>
+      </div>
+
+      <a href="news.html" class="back-btn" style="margin-top: 2rem;">← Back to News</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

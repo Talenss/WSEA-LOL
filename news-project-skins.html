@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PROJECT Skin Line Extended - League of Legends">
+  <meta name="theme-color" content="#0a0e27">
+  <title>PROJECT Skin Line Extended - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .article-body {
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body h3 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .skin-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .skin-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      text-align: center;
+    }
+
+    .skin-card:hover {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .skin-card h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .skin-card p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .skin-price {
+      color: #10b981;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .feature-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .feature-item:hover {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .feature-item h4 {
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .feature-item p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    body.light-mode .skin-card,
+    body.light-mode .feature-item {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    body.light-mode .skin-card:hover,
+    body.light-mode .feature-item:hover {
+      background: rgba(59, 130, 246, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <a href="esports.html"><button class="nav-btn">Esports</button></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 5rem; min-height: 100vh;">
+    <div class="article-container">
+      <a href="news.html" class="back-btn">← Back to News</a>
+
+      <div class="article-header">
+        <h1>🤖 PROJECT Skin Line Extended</h1>
+        <div class="article-meta">
+          <span>📅 November 20, 2025</span>
+          <span>🏷️ Cosmetics</span>
+          <span>⏱️ 5 min read</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>
+          The popular PROJECT skin line returns with 5 new champions transforming into cybernetic warriors. These futuristic skins feature custom animations, particles, and sound effects that completely transform your favorite champions into sleek, technological beings.
+        </p>
+
+        <div class="highlight-box">
+          <strong>🚀 Release Date:</strong> November 22, 2025 | <strong>Price:</strong> 1350 RP (or 1950 Blue Essence) per skin
+        </div>
+
+        <h3>🤖 New PROJECT Skins</h3>
+        <p>
+          Five champions are receiving the PROJECT treatment. Each skin features unique visual effects and thematic design:
+        </p>
+
+        <div class="skin-showcase">
+          <div class="skin-card">
+            <h4>🔥 PROJECT Pyke</h4>
+            <p>A deadly cyber assassin hunting targets in the neon-soaked city streets.</p>
+            <p class="skin-price">1350 RP</p>
+          </div>
+          <div class="skin-card">
+            <h4>⚡ PROJECT Akali</h4>
+            <p>Ninja transformed into a tech warrior with holographic weapons.</p>
+            <p class="skin-price">1350 RP</p>
+          </div>
+          <div class="skin-card">
+            <h4>🌊 PROJECT Taliyah</h4>
+            <p>Sand mage reborn as a technological force manipulator.</p>
+            <p class="skin-price">1350 RP</p>
+          </div>
+          <div class="skin-card">
+            <h4>💀 PROJECT Kled</h4>
+            <p>Mounted warrior with cybernetic enhancements and brutal armor.</p>
+            <p class="skin-price">1350 RP</p>
+          </div>
+          <div class="skin-card">
+            <h4>🎻 PROJECT Senna</h4>
+            <p>Long-range sniper equipped with futuristic tech weapons.</p>
+            <p class="skin-price">1350 RP</p>
+          </div>
+        </div>
+
+        <h3>✨ Skin Features</h3>
+        <p>
+          Each PROJECT skin includes comprehensive visual and audio upgrades:
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <h4>🎨 Custom Visuals</h4>
+            <p>Completely new character models with sleek cybernetic designs and glowing effects</p>
+          </div>
+          <div class="feature-item">
+            <h4>⚡ Particle Effects</h4>
+            <p>Tech-themed ability effects with holographic and electric particles</p>
+          </div>
+          <div class="feature-item">
+            <h4>🔊 Sound Design</h4>
+            <p>Futuristic sound effects and voice filters matching the cyberpunk aesthetic</p>
+          </div>
+          <div class="feature-item">
+            <h4>🎭 Animations</h4>
+            <p>Smooth, fluid animations with robotic and technological movements</p>
+          </div>
+          <div class="feature-item">
+            <h4>👑 Emotes & Icons</h4>
+            <p>Unique emotes and miniature icons for each PROJECT champion</p>
+          </div>
+          <div class="feature-item">
+            <h4>🎪 Recall Animation</h4>
+            <p>Custom recall animations showing technological transformation sequences</p>
+          </div>
+        </div>
+
+        <h3>🎨 Visual Design Philosophy</h3>
+        <p>
+          The PROJECT skin line represents humanity's merger with technology. The design philosophy focuses on sleek, futuristic aesthetics with neon glows and metallic finishes. Each champion has a unique technological interpretation while maintaining their core identity.
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Thematic Consistency:</strong> All skins share similar color palettes (neon blues, purples, pinks) and design language, but each champion's skin is distinctly unique.</p>
+        </div>
+
+        <h3>📦 Bundle Pricing</h3>
+        <p>
+          Three different bundle options are available for players who want multiple skins:
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Full Bundle (5 Skins):</strong> 5850 RP (save 900 RP) - Includes exclusive border and icon</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Triple Bundle (3 Skins):</strong> 3510 RP (save 540 RP) - Choose any 3 skins</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Duo Bundle (2 Skins):</strong> 2340 RP (save 360 RP) - Choose any 2 skins</li>
+        </ul>
+
+        <h3>🎁 Chromas Available</h3>
+        <p>
+          All five PROJECT skins have complementary chromas available for 290 RP each. Chromas change the color scheme while maintaining the original design:
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Obsidian Chroma:</strong> Dark, sleek black and gray theme</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Emerald Chroma:</strong> Green and cyan technological aesthetic</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Ruby Chroma:</strong> Red and black aggressive design</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Pearl Chroma:</strong> White and silver elegant look</li>
+        </ul>
+
+        <h3>🌟 Prestige Edition</h3>
+        <p>
+          Limited Prestige versions are available for PROJECT Pyke and PROJECT Senna. These exclusive skins feature:
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Golden Accents:</strong> Prestigious golden trimming and effects instead of neon colors | <strong>Unique Border:</strong> Exclusive prestige cosmetic border | <strong>Premium Sound:</strong> Exclusive prestige-only sound effects</p>
+        </div>
+
+        <p>
+          Prestige skins are obtained through Prestige Points or the Prestige Pass, not RP. These are premium cosmetics for dedicated players.
+        </p>
+
+        <h3>🎮 Gameplay Impact</h3>
+        <p>
+          These are purely cosmetic skins with no gameplay advantages. PROJECT skins are 100% visual updates that don't affect champion abilities, stats, or mechanics. They're about personal style and preference.
+        </p>
+
+        <h3>📱 Release Timeline</h3>
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>November 22, 2025:</strong> All skins released in store</li>
+          <li style="margin-bottom: 0.75rem;"><strong>November 25, 2025:</strong> Chromas and accessories become available</li>
+          <li style="margin-bottom: 0.75rem;"><strong>December 1, 2025:</strong> Prestige skins available for limited time</li>
+          <li style="margin-bottom: 0.75rem;"><strong>January 2026:</strong> Skins might return for special events</li>
+        </ul>
+
+        <h3>💡 Why PROJECT Skins Are Popular</h3>
+        <p>
+          The PROJECT skin line has become one of League's most beloved cosmetic lines because:
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;">Consistent visual quality and design language</li>
+          <li style="margin-bottom: 0.75rem;">Futuristic aesthetic appeals to wide audience</li>
+          <li style="margin-bottom: 0.75rem;">Strong lore integration with PROJECT universe</li>
+          <li style="margin-bottom: 0.75rem;">High-quality animations and effects</li>
+          <li style="margin-bottom: 0.75rem;">Regular returns with new champion selections</li>
+        </ul>
+
+        <p style="margin-top: 2rem; font-style: italic; color: var(--accent);">
+          Prepare for humanity's evolution! The PROJECT skin line brings cutting-edge cosmetics to the Rift. Become a cybernetic warrior today! 🤖⚔️
+        </p>
+      </div>
+
+      <a href="news.html" class="back-btn" style="margin-top: 2rem;">← Back to News</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

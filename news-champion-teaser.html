@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="New Champion Teaser - League of Legends">
+  <meta name="theme-color" content="#0a0e27">
+  <title>New Champion Teaser - League Companion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .article-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .article-body {
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body h3 {
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateX(-4px);
+    }
+
+    .highlight-box {
+      background: rgba(59, 130, 246, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .teaser-image {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      margin: 1.5rem 0;
+      border: 1px solid var(--accent);
+    }
+
+    .clue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .clue-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .clue-card:hover {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .clue-card h4 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .clue-card p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    .ability-hints {
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .ability-hints h4 {
+      color: var(--accent-2);
+      margin-bottom: 1rem;
+    }
+
+    .ability-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+    }
+
+    .ability-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .ability-icon {
+      min-width: 40px;
+      width: 40px;
+      height: 40px;
+      background: rgba(168, 85, 247, 0.2);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: var(--accent-2);
+    }
+
+    .community-predictions {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    body.light-mode .clue-card {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    body.light-mode .clue-card:hover {
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    body.light-mode .highlight-box {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    body.light-mode .ability-hints {
+      background: rgba(168, 85, 247, 0.08);
+      border-color: rgba(168, 85, 247, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" style="text-decoration: none;">
+        <div class="brand" title="Go to home">⚔️ LOL COMPANION</div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="champions.html"><button class="nav-btn">Champions</button></a>
+        <a href="news.html"><button class="nav-btn">News</button></a>
+        <a href="esports.html"><button class="nav-btn">Esports</button></a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="padding-top: 5rem; min-height: 100vh;">
+    <div class="article-container">
+      <a href="news.html" class="back-btn">← Back to News</a>
+
+      <div class="article-header">
+        <h1>🌙 New Champion Teaser Released</h1>
+        <div class="article-meta">
+          <span>📅 December 3, 2025</span>
+          <span>🏷️ Champions</span>
+          <span>⏱️ 5 min read</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>
+          A mysterious new champion will join the Rift in the coming weeks, and Riot Games has released the first official teaser. Based on early clues and community speculation, this champion hails from the Shadow Isles with dark, mysterious abilities that will reshape the meta.
+        </p>
+
+        <div class="teaser-image">👁️ 🌙 ☠️
+        </div>
+
+        <div class="highlight-box">
+          <strong>Release Date:</strong> Estimated mid-to-late January 2026 | <strong>Teaser Available:</strong> Official YouTube channel
+        </div>
+
+        <h3>🔍 Clues from the Teaser</h3>
+        <p>
+          The brief teaser video has left the community scrambling for clues. Here's what we know so far about this mysterious new champion:
+        </p>
+
+        <div class="clue-grid">
+          <div class="clue-card">
+            <h4>🌙 Origin</h4>
+            <p>Shadow Isles - a region of mystery and darkness. Known for corrupted and ghostly champions.</p>
+          </div>
+          <div class="clue-card">
+            <h4>🗣️ Voice</h4>
+            <p>Deep, haunting voice with ethereal whispers. Suggests a specter or wraith-like being.</p>
+          </div>
+          <div class="clue-card">
+            <h4>⚡ Gameplay</h4>
+            <p>Teaser hints at multiple damage types and area control. Likely magic-based champion.</p>
+          </div>
+          <div class="clue-card">
+            <h4>🎨 Visuals</h4>
+            <p>Dark, shadowy aesthetic with ethereal effects. Animations suggest fluid, ghost-like movement.</p>
+          </div>
+        </div>
+
+        <h3>🎯 Ability Hints</h3>
+        <p>
+          While official ability details haven't been released, the teaser footage hints at the champion's kit:
+        </p>
+
+        <div class="ability-hints">
+          <h4>Suspected Ability Kit</h4>
+          
+          <div class="ability-item">
+            <div class="ability-icon">P</div>
+            <div>
+              <strong>Passive (Speculated)</strong>
+              <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0;">Grants movement speed in darkness or near death enemies. Possible health drain mechanic.</p>
+            </div>
+          </div>
+
+          <div class="ability-item">
+            <div class="ability-icon">Q</div>
+            <div>
+              <strong>Q Ability (Speculated)</strong>
+              <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0;">Ranged damage ability with possible debuff. Teaser shows projectile-like effect.</p>
+            </div>
+          </div>
+
+          <div class="ability-item">
+            <div class="ability-icon">W</div>
+            <div>
+              <strong>W Ability (Speculated)</strong>
+              <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0;">Area control ability creating darkness zones. Possibly mobility or evasion tool.</p>
+            </div>
+          </div>
+
+          <div class="ability-item">
+            <div class="ability-icon">E</div>
+            <div>
+              <strong>E Ability (Speculated)</strong>
+              <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0;">Utility or dash ability. Hints suggest ghostly phase mechanic.</p>
+            </div>
+          </div>
+
+          <div class="ability-item">
+            <div class="ability-icon">R</div>
+            <div>
+              <strong>Ultimate (Speculated)</strong>
+              <p style="font-size: 0.85rem; margin: 0.25rem 0 0 0;">Large area ultimate with crowd control. Teaser shows massive shadow effect.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>🎭 Lore Connection</h3>
+        <p>
+          The new champion appears to be deeply connected to Shadow Isles lore. Hints in the teaser suggest a dark backstory involving loss, corruption, and redemption. This champion may interact with other Shadow Isles champions like Thresh, Hecarim, and Karthus.
+        </p>
+
+        <div class="highlight-box">
+          <p><strong>Theory:</strong> Community speculation suggests this might be a champion from the past seeking revenge on those who wronged them, with Shadow Isles granting them dark powers.</p>
+        </div>
+
+        <h3>💭 Community Theories</h3>
+        <p>
+          The League community has been buzzing with theories about this mysterious champion:
+        </p>
+
+        <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary);">
+          <li style="margin-bottom: 0.75rem;"><strong>Spirit Champion:</strong> Could be a purely spirit-based champion, phasing in and out of reality</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Revenge Arc:</strong> A character seeking vengeance against those who betrayed them</li>
+          <li style="margin-bottom: 0.75rem;"><strong>New Role:</strong> Might introduce a new playstyle or fill a specific meta gap</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Female Champion:</strong> Voice clues hint at a female character, filling that Shadow Isles gap</li>
+        </ul>
+
+        <h3>📺 When Will They Be Revealed?</h3>
+        <p>
+          Based on Riot's usual release schedule, here's what to expect:
+        </p>
+
+        <div class="community-predictions">
+          <p><strong>🎬 Full Champion Reveal Video:</strong> Expected in 1-2 weeks with complete abilities and lore</p>
+          <p><strong>🧪 PBE Testing:</strong> Usually 1 week after reveal for balance testing</p>
+          <p><strong>🚀 Official Release:</strong> Mid-to-late January 2026 on live servers</p>
+          <p><strong>📺 First LEC Appearance:</strong> Likely January/February in professional play</p>
+        </div>
+
+        <h3>🎮 What This Means for the Meta</h3>
+        <p>
+          A new Shadow Isles champion will likely impact the current meta significantly. Depending on their kit and role, they could shift champion priorities in multiple positions. If they're a strong jungler or mid laner, expect immediate meta adjustments in competitive play.
+        </p>
+
+        <div class="highlight-box">
+          <p>Stay tuned to League's official channels for the full reveal. In the meantime, join the community discussions and share your theories! ⚔️</p>
+        </div>
+
+        <h3>🔔 Keep an Eye Out</h3>
+        <p>
+          Riot Games often releases teaser videos on Twitter, YouTube, and the official website days before full champion reveals. Follow these channels to catch any new clues or announcements about this mysterious new champion joining the Rift!
+        </p>
+
+        <p style="margin-top: 2rem; font-style: italic; color: var(--accent);">
+          The shadow grows darker... Are you ready to meet the newest champion? 🌙
+        </p>
+      </div>
+
+      <a href="news.html" class="back-btn" style="margin-top: 2rem;">← Back to News</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 League Companion • Built with ⚔️ for Summoners</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
