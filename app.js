@@ -150,20 +150,17 @@ const FALLBACK_CHAMPIONS = [
   { id: 'Zilean', name: 'Zilean', title: 'The Chronokeeper', role: 'Support', tags: ['Support'], race: 'Human', affiliation: 'Zaun' },
   { id: 'Zoe', name: 'Zoe', title: 'The Aspect of Twilight', role: 'Mage', tags: ['Mage'], race: 'Celestial', affiliation: 'Targon' },
   { id: 'Zyra', name: 'Zyra', title: 'Rise of the Thorns', role: 'Support', tags: ['Support'], race: 'Plant', affiliation: 'Zaun' },
-];// ============================================================
-//  LEAGUE OF LEGENDS COMPANION - MAIN APPLICATION
-// ============================================================
+];
 
 const VERSION = '15.2.1';
 const DDRAGON_BASE = `https://ddragon.leagueoflegends.com/cdn/${VERSION}`;
 let champions = [];
 let favorites = new Set();
 
-// Sample fallback champions (always available)
 
-// ============================================================
+
 //  INITIALIZATION
-// ============================================================
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🎮 League Companion - Initializing...');
@@ -182,9 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ============================================================
+
 //  THEME MANAGEMENT
-// ============================================================
+
 
 function initTheme() {
   const themeToggle = document.getElementById('themeToggle');
@@ -210,9 +207,8 @@ function toggleTheme() {
   themeToggle.textContent = isDark ? '☀️' : '🌙';
 }
 
-// ============================================================
 //  NAVIGATION
-// ============================================================
+
 
 function initNavigation() {
   const brand = document.querySelector('.brand');
@@ -223,9 +219,8 @@ function initNavigation() {
   }
 }
 
-// ============================================================
 //  RENDER CHAMPIONS GRID
-// ============================================================
+
 
 function renderChampions() {
   console.log('🎨 Rendering ' + champions.length + ' champions...');
@@ -282,9 +277,9 @@ function getDDragonSplash(champId) {
   return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champId}_0.jpg`;
 }
 
-// ============================================================
+
 //  EVENT LISTENERS
-// ============================================================
+
 
 function attachChampionCardListeners() {
   document.querySelectorAll('.champion-card').forEach(card => {
@@ -352,9 +347,8 @@ function initializeFilters() {
   });
 }
 
-// ============================================================
 //  FAVORITES SYSTEM
-// ============================================================
+
 
 function toggleFavorite(champId) {
   if (favorites.has(champId)) {
@@ -380,9 +374,9 @@ function loadFavorites() {
   }
 }
 
-// ============================================================
+
 //  CHAMPION MODAL
-// ============================================================
+
 
 async function openChampionModal(champ) {
   const modal = document.getElementById('championModal');
